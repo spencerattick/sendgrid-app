@@ -23,31 +23,42 @@ This app was built with a create-react-app template so it is very easy to get se
 
 2. Add the necessary packages:
 
-`cd sendgrid-app`
+`$ cd sendgrid-app`
 
-`npm install`
+`$ npm install`
 
 3. Start the server:
 
-`npm start`
+`$ npm start`
 
 ## Contributing
-Please feel welcome to contribute to this project! There are a [list of open to-dos here](https://trello.com/b/3O6rnu7f/sendgrid-app). The organization is as follows:
+Please feel welcome to contribute to this project! There are a [list of open to-dos here](https://trello.com/invite/b/3O6rnu7f/9973ee0cd8484ff49849562b7e2c332d/sendgrid-app). The organization is as follows:
 
 green = backend work
+
 yellow = general work
+
 purple = frontend work
 
 Go ahead and assign a task to yourself and move it from the __To Dos__ list to the __In Progress__ list.
 
+Feel free to add new items to the __To Dos__ list as you see them.
+
 When pushing up new changes please ensure the following:
 
 1. you're on a separate branch
-2. you create a Pull Request rather than committing directly to the codebase
-3. your Pull Request includes at least one passing test for backend tasks
+2. you create a pull request rather than committing directly to the codebase
+3. your pull request includes at least one passing test for backend tasks
+4. you've run an end-to-end test that shows no functionality was negatively impacted
 
-When writing a Pull Request please make sure it's as descriptive as possible.
+When writing a pull request please make sure it's as descriptive as possible.
 
 ## Testing
 
-This section is TBD as my next step is to add testing to the project.
+The current test file can be found at `./test/index_test.js`.
+
+To run the test suite, use `$ npm test` when you're in the root of the project.
+
+When making a pull request for backend work, please ensure you've included at least one new test to accompany your code change.
+
+If you're unfamiliar with [Mocha](https://mochajs.org/) as a testing tool, here is a [great course where you can get an introduction](https://www.codecademy.com/learn/learn-javascript-unit-testing).
