@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+#Sendgrid Comms App
+This purpose of this application is to be able to send proactive communications out to customers in the event of a SEV. This tool will generally be used by the Product Tech Leads of the Success Engineering team in conjunction with the team managing the SEV.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+With this tool, you can upload a CSV of user email and dynamic content (workspace slugs, source slugs, etc.) and visualize how communications will look through a Sendgrid email template. This will give more visibility and make the comms process much easier than the Node script that was used for this task previously.
 
-## Available Scripts
+##Local Setup
+This app was built with a create-react-app template so it is very easy to get setup with. Please go ahead and follow the steps below:
 
-In the project directory, you can run:
+1. Clone the repo onto your machine:
+`$ git clone https://github.com/spencerattick/sendgrid-app.git`
 
-### `npm start`
+2. Add the necessary packages:
+`cd sendgrid-app`
+`npm install`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+3. Start the server:
+`npm start`
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##Contributing
+Please feel welcome to contribute to this project! There are a [list of open to-dos here](https://trello.com/b/3O6rnu7f/sendgrid-app). The organization is as follows:
 
-### `npm test`
+green = backend work
+yellow = general work
+purple = frontend work
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Go ahead and assign a task to yourself and move it from the __To Dos__ list to the __In Progress__ list.
 
-### `npm run build`
+When pushing up new changes please ensure the following:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. you're on a separate branch
+2. you create a Pull Request rather than committing directly to the codebase
+3. your Pull Request includes at least one passing test for backend tasks
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+When writing a Pull Request please make sure it's as descriptive as possible.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##Testing
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section is TBD as my next step is to add testing to the project.
