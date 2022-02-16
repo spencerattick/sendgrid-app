@@ -14,6 +14,7 @@
     "web-vitals": "^2.1.2"
   },
   "scripts": {
+    "start": "react-scripts start",
     "test": "mocha"
   },
   "eslintConfig": {
