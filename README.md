@@ -27,9 +27,13 @@ This app was built with a create-react-app template so it is very easy to get se
 
 `$ npm install`
 
-3. Start the server:
+3. Start the app:
 
 `$ npm start`
+
+4. In a separate terminal tab, start the server:
+
+`$ node server.js`
 
 ## Contributing
 Please feel welcome to contribute to this project! There are a [list of open to-dos here](https://trello.com/invite/b/3O6rnu7f/9973ee0cd8484ff49849562b7e2c332d/sendgrid-app). The organization is as follows:
