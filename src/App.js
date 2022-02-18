@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import Papa from 'papaparse';
 import './App.css';
 
+
 function App() {
   const [apiKeyValue, setApiKeyValue] = useState(null);
   const [templateIdValue, setTemplateIdValue] = useState(null);
@@ -33,6 +34,30 @@ function App() {
   function handlePreviewButtonClick(e) {
     e.preventDefault();
     setSendApiRequest(true);
+  }
+
+  function handleUploadButtonClick(e) {
+    e.preventDefault();
+    console.log(templateIdValue)
+    let myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    var raw = JSON.stringify({
+      csvUpload,
+      templateIdValue,
+      apiKeyValue
+    });
+
+    var requestOptions = {
+      method: 'POST',
+      headers: myHeaders,
+      body: raw
+    };
+
+    fetch("http://localhost:8080/backend", requestOptions)
+      .then(response => response.text())
+      .then(result => console.log(result))
+      .catch(error => console.log('error', error));
   }
 
   function RenderSampleMessage() {
@@ -116,7 +141,7 @@ function App() {
            accept=".csv"
          />
        <button onClick={handlePreviewButtonClick}> Preview Message</button>
-       <button > Upload Emails</button>
+       <button onClick={handleUploadButtonClick}> Upload Emails</button>
 
         </form>
         <RenderSampleMessage></RenderSampleMessage>
