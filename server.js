@@ -69,7 +69,7 @@ function processDynamicContent(row) {
 }
 
 
-async function send(row, templateId) {
+async function send(row, templateId, test) {
   const to = await sendToIncidentOrOwnerContact(row);
   //CAN ALSO USE friends@segment.com - BOTH GO TO SUCCESS ENG
   const from = 'support@segment.com';
@@ -79,7 +79,9 @@ async function send(row, templateId) {
     to,
     from,
   };
-  await sgMail.send(msg);
+  if (!test) {
+    await sgMail.send(msg);
+  }
   return msg;
 }
 
@@ -106,3 +108,5 @@ async function sendAll(apiKey, csvData, templateId) {
 
 
 app.listen(process.env.PORT || 8080);
+
+module.exports = { send };
